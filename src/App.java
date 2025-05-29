@@ -4,12 +4,14 @@ import java.util.Random;
 import baraja.MetodoBaraja;
 import cartas.Carta;
 import cartas.ListaCartas;
+import historialCartas.HistorialCartas;
 
 public class App {
     public static void main(String[] args) throws Exception {
         ListaCartas listaCartas = new ListaCartas();
         List<Carta> cartas = new ArrayList<>();
         MetodoBaraja barajaCartas = new MetodoBaraja();
+        HistorialCartas historialCartas = new HistorialCartas();
 
         cartas = listaCartas.llenarListaCartas();
 
@@ -19,10 +21,19 @@ public class App {
         barajaCartas.mostrarCartas();
 
         Carta cartaTomada = barajaCartas.tomarCarta();
+        historialCartas.apilar(cartaTomada);
+        
+        cartaTomada = barajaCartas.tomarCarta();
+        historialCartas.apilar(cartaTomada);
 
-        System.out.println("Carta Tomada: "  + cartaTomada.getNumero());
+        cartaTomada = barajaCartas.tomarCarta();
+        historialCartas.apilar(cartaTomada);
 
-        barajaCartas.mostrarCartas();
+        System.out.println("\n" + "Cartas Tomadas: ");
+
+        historialCartas.mostrarCartas();
+
+        // barajaCartas.mostrarCartas();
     }
 
     public static void llenarBaraja(MetodoBaraja barajaCartas, List<Carta> cartas) {
