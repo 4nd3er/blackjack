@@ -106,10 +106,10 @@ public class ListaCartas {
     // Llena la lista con las 52 cartas (13 por cada palo)
     public void llenarListaCartas() {
         int contador = 1;
-        int contadorPalo = 1;
+        int contadorPalo = 0;
 
         // Recorre los 4 palos
-        while (contadorPalo <= 4) {
+        while (contadorPalo <= 3) {
             // Agrega 13 cartas por palo
             while (contador <= 13) {
                 Carta carta = new Carta();
