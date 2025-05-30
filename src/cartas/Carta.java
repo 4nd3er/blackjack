@@ -1,7 +1,9 @@
 package cartas;
+
 public class Carta {
     private String palo;
-    private Object numero;
+    private String numero;
+    private Carta sigCarta;
 
     public String getPalo() {
         return palo;
@@ -11,11 +13,19 @@ public class Carta {
         this.palo = palo;
     }
 
-    public Object getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Object numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public Carta getSigCarta() {
+        return sigCarta;
+    }
+
+    public void setSigCarta(Carta sigCarta) {
+        this.sigCarta = sigCarta;
     }
 }

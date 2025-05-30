@@ -4,6 +4,7 @@ import cartas.Carta;
 
 public class Nodo {
     private Carta carta;
+    private Nodo sigCarta;
 
     public Carta getCarta() {
         return carta;
@@ -13,7 +14,6 @@ public class Nodo {
         this.carta = carta;
     }
 
-    private Nodo sigCarta;
 
     public Nodo getSigCarta() {
         return sigCarta;
